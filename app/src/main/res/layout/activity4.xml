@@ -13,53 +13,45 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView40"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Informations\n"
-                android:textSize="30dp" />
-
-            <TextView
                 android:id="@+id/textView41"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Qui sommes-nous ?"
+                android:text="@string/qui_sommes_nous"
                 android:textSize="20dp"/>
 
             <TextView
                 android:id="@+id/textView42"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nous sommes une petite entreprise ayant pour ambition d'ouvrir les gens au monde et à la connaissance !\n"
+                android:text="@string/qui_text"
                 android:textSize="13dp"/>
 
             <TextView
                 android:id="@+id/textView43"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Pourquoi cette application ?"
+                android:text="@string/pourquoi_cette_application"
                 android:textSize="20dp"/>
 
             <TextView
                 android:id="@+id/textView44"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nous avons voulu cette application gratuite afin que tous puissent avoir accès à l'information et se tenir au courant de l'évolution de nos sociétés, que ce soit dans le domaine économique, financier, social ou encore culturel.\n"
+                android:text="@string/pourquoi_text"
                 android:textSize="13dp"/>
 
             <TextView
                 android:id="@+id/textView45"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Comment fonctionne-t-elle ?"
+                android:text="@string/comment_fonctionne_t_elle"
                 android:textSize="20dp"/>
 
             <TextView
                 android:id="@+id/textView46"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Vous devez tout d'abord remplir les critères de séléctions, afin que nous puissions vous faire parvenir les articles qui correspondent le plus à vos attentes. Cliquez ensuite sur 'Lancer la recherche', une panoplie d'articles vous est alors proposé. Vous pouvez visualiser le titre, la source ou encore la date de parution de l'article. Si l'un d'eux semble vous interesser, cliquez dessus. Une nouvelle page s'ouvre alors, délivrant davantage d'informations et notamment une entrevue de l'article. Commencez à le lire, si celui-ci vous intéresse, lancez la recherche et parvenez à l'article. Il ne reste plus qu'à vous délecter de connaissances !\nUn article vous intéresse mais vous n'avez pas le temps de le lire ? Aucun problème ! Enregistrez-le dans vos favoris et replongez-vous y plus tard !"
+                android:text="@string/mode_d_emploi_text"
                 android:justificationMode="inter_word"
                 android:textSize="13dp"/>
 

@@ -7,7 +7,7 @@
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:id="@+id/myCoordinatorLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -41,7 +41,7 @@
                 android:id="@+id/imageView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:contentDescription="L'image illustrant l'article n'a pas pu être affichée" />
+                android:contentDescription="@string/image_non_chargee" />
 
             <TextView
                 android:id="@+id/textView34"
@@ -52,13 +52,13 @@
                 android:id="@+id/lire"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Lire l'article" />
+                android:text="@string/lire_la_suite" />
 
             <Button
                 android:id="@+id/favoris"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Mettre en favori" />
+                android:text="@string/enregistrer" />
 
         </LinearLayout>
 

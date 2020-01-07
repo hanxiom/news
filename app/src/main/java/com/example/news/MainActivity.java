@@ -28,10 +28,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Display logo in the action bar
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setLogo(R.mipmap.ic_launcher);
-        getSupportActionBar().setDisplayUseLogoEnabled(true);
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;

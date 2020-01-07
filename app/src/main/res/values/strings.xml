@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">News</string>
+    <string name="informations">Informations</string>
+    <string name="favoris">Favoris</string>
+    <string name="enregistrer">Enregistrer</string>
+    <string name="lire_la_suite">Lire la suite</string>
+    <string name="image_non_chargee">L\'image accompagnant l\'article n\'a pas pu être chargée</string>
+    <string name="mode_d_emploi_text">Vous devez tout d\'abord remplir les critères de sélections, afin que nous puissions vous faire parvenir les articles qui correspondent le plus à vos attentes. Cliquez ensuite sur \'Lancer la recherche\', une panoplie d\'articles vous est alors proposé. Vous pouvez visualiser le titre, la source ou encore la date de parution de l\'article. Si l\'un d\'eux semble vous intéresser, cliquez dessus. Une nouvelle page s\'ouvre alors, délivrant d\'avantage d\'informations et notamment un aperçu de l\'article. Si celui-ci vous intéresse, vous pouvez l\'ouvrir sur votre navigateur. Il ne reste plus qu\'à vous délecter de connaissances ! Un article vous intéresse mais vous n\'avez pas le temps de le lire ? Aucun problème ! Enregistrez-le dans vos favoris et replongez-vous y plus tard !</string>
+    <string name="comment_fonctionne_t_elle">Comment fonctionne-t-elle ?</string>
+    <string name="pourquoi_text">Nous avons voulu cette application gratuite afin que tous puissent avoir accès à l\'information et se tenir au courant de l\'évolution de nos sociétés, que ce soit dans le domaine économique, financier, social ou encore culturel.</string>
+    <string name="pourquoi_cette_application">Pourquoi cette application ?</string>
+    <string name="qui_text">Nous sommes une petite entreprise ayant pour ambition d\'ouvrir les gens au monde et à la connaissance !</string>
+    <string name="qui_sommes_nous">Qui sommes-nous ?</string>
+    <string name="lancer_la_recherche">Lancer la recherche</string>
+    <string name="mots_cles">Mots clés</string>
+    <string name="keyword_example">écologie europe</string>
+    <string name="source_example">bbc-news</string>
+    <string name="sources">Source(s)</string>
+    <string name="categorie">Catégorie</string>
+    <string name="pays">Pays</string>
+    <string name="bienvenue">Bienvenue, veuillez renseigner les critères des articles que vous souhaitez consulter</string>
 </resources>

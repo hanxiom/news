@@ -5,6 +5,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.provider.BaseColumns;
+import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -23,6 +24,24 @@ public class Activity5 extends AppCompatActivity {
     ArrayList<String> dates = new ArrayList<>();
     ArrayList<String> contents = new ArrayList<>();
     ArrayList<String> urls = new ArrayList<>();
+
+    @Override
+    public boolean onSupportNavigateUp(){
+        // Enables the back button behaviour
+        finish();
+        return true;
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Set activity's title
+        getSupportActionBar().setTitle("Titres enregistrés");
+        // Add a back button
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_no_fav, menu);
+        return true;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

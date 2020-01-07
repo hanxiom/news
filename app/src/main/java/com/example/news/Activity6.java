@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -25,6 +26,24 @@ public class Activity6 extends AppCompatActivity {
     String url;
 
     Snackbar mySnackbar;
+
+    @Override
+    public boolean onSupportNavigateUp(){
+        // Enables the back button behaviour
+        finish();
+        return true;
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Set activity's title
+        getSupportActionBar().setTitle("");
+        // Add a back button
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_no_fav, menu);
+        return true;
+    }
 
     @SuppressLint("SetTextI18n")
     @Override

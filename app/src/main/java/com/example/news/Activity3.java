@@ -6,6 +6,7 @@ import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -31,6 +32,24 @@ public class Activity3 extends AppCompatActivity {
     String url;
 
     Snackbar mySnackbar;
+
+    @Override
+    public boolean onSupportNavigateUp(){
+        // Enables the back button behaviour
+        finish();
+        return true;
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Set activity's title
+        getSupportActionBar().setTitle("");
+        // Add a back button
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
 
     @SuppressLint("SetTextI18n")
     @Override

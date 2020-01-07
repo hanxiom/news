@@ -1,10 +1,29 @@
 package com.example.news;
 
 import android.os.Bundle;
+import android.view.Menu;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Activity4 extends AppCompatActivity {
+
+    @Override
+    public boolean onSupportNavigateUp(){
+        // Enables the back button behaviour
+        finish();
+        return true;
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Set activity's title
+        getSupportActionBar().setTitle("A propos");
+        // Add a back button
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_no_info, menu);
+        return true;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

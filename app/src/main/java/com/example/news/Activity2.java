@@ -21,11 +21,18 @@ public class Activity2 extends AppCompatActivity {
     AsyncNewsJSONData task;
 
     @Override
+    public boolean onSupportNavigateUp(){
+        // Enables the back button behaviour
+        finish();
+        return true;
+    }
+
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Display logo in the action bar
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setLogo(R.mipmap.ic_launcher);
-        getSupportActionBar().setDisplayUseLogoEnabled(true);
+        // Set activity's title
+        getSupportActionBar().setTitle("Gros titres");
+        // Add a back button
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;

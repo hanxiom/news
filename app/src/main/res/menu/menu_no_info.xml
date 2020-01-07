@@ -6,10 +6,4 @@
         app:showAsAction="ifRoom"
         android:title="@string/favoris">
     </item>
-    <item
-        android:id="@+id/button2"
-        android:icon="@drawable/logo"
-        app:showAsAction="ifRoom|withText"
-        android:title="@string/informations">
-    </item>
 </menu>
