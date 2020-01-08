@@ -3,6 +3,7 @@ package com.example.news;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -40,9 +41,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         ((NewsApp) getApplication()).dbHelper = new DbHelper(this);
 
-        Button lancer_la_recherche = findViewById(R.id.lancer_la_recherche);
-        Button infos = findViewById(R.id.infos);
-        Button favBtn = findViewById(R.id.favoris);
+        Button lancer_la_recherche = findViewById(R.id.lancer_la_recherche);;
         spinner1 = findViewById(R.id.spinner1);
         spinner1.setOnItemSelectedListener(this);
         spinner2 = findViewById(R.id.spinner2);
@@ -90,24 +89,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             }
         });
 
-        infos.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent activity4 = new Intent(MainActivity.this, Activity4.class);
-                startActivity(activity4);
-            }
-        });
-
-        favBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent activity5 = new Intent(MainActivity.this, Activity5.class);
-                startActivity(activity5);
-            }
-        });
-
         String langue = this.getResources().getConfiguration().locale.getDisplayLanguage();
-
 
         String langue2 = langue.substring(0, 2);
 
@@ -138,18 +120,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         // Another interface callback
     }
 
-
-//    public boolean isInternetAvailable() {
-//        try {
-//            InetAddress ipAddr = InetAddress.getByName("google.com");
-//            //You can replace it with your name
-//            return !ipAddr.equals("");
-//
-//        } catch (Exception e) {
-//            return false;
-//        }
-//    }
-
     public boolean isOnline() {
         Runtime runtime = Runtime.getRuntime();
         try {
@@ -161,6 +131,21 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         catch (InterruptedException e) { e.printStackTrace(); }
 
         return false;
+    }
+
+    public void onComposeAction(MenuItem mi) {
+        switch(mi.getItemId()) {
+            case R.id.fav_item:
+                Intent activity5 = new Intent(MainActivity.this, Activity5.class);
+                startActivity(activity5);
+                break;
+            case R.id.infos_item:
+                Intent activity4 = new Intent(MainActivity.this, Activity4.class);
+                startActivity(activity4);
+                break;
+            default:
+                throw new RuntimeException("Aie !");
+        }
     }
 
 

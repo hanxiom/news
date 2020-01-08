@@ -7,6 +7,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -110,5 +111,20 @@ public class Activity3 extends AppCompatActivity {
                 mySnackbar.show();
             }
         });
+    }
+
+    public void onComposeAction(MenuItem mi) {
+        switch(mi.getItemId()) {
+            case R.id.fav_item:
+                Intent activity5 = new Intent(Activity3.this, Activity5.class);
+                startActivity(activity5);
+                break;
+            case R.id.infos_item:
+                Intent activity4 = new Intent(Activity3.this, Activity4.class);
+                startActivity(activity4);
+                break;
+            default:
+                throw new RuntimeException("Aie !");
+        }
     }
 }

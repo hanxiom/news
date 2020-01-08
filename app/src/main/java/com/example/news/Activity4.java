@@ -1,7 +1,9 @@
 package com.example.news;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -31,4 +33,12 @@ public class Activity4 extends AppCompatActivity {
         setContentView(R.layout.activity4);
     }
 
+    public void onComposeAction(MenuItem mi) {
+        if (mi.getItemId() == R.id.fav_item) {
+            Intent activity5 = new Intent(Activity4.this, Activity5.class);
+            startActivity(activity5);
+        } else {
+            throw new RuntimeException("Aie !");
+        }
+    }
 }

@@ -6,6 +6,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.provider.BaseColumns;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -35,7 +36,7 @@ public class Activity5 extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Set activity's title
-        getSupportActionBar().setTitle("Titres enregistrés");
+        getSupportActionBar().setTitle("Favoris");
         // Add a back button
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -126,5 +127,14 @@ public class Activity5 extends AppCompatActivity {
                 startActivity(activity6);
             }
         });
+    }
+
+    public void onComposeAction(MenuItem mi) {
+        if (mi.getItemId() == R.id.infos_item) {
+            Intent activity4 = new Intent(Activity5.this, Activity4.class);
+            startActivity(activity4);
+        } else {
+            throw new RuntimeException("Aie !");
+        }
     }
 }

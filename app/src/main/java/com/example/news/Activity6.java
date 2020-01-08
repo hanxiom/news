@@ -6,6 +6,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -106,5 +107,14 @@ public class Activity6 extends AppCompatActivity {
                 mySnackbar.show();
             }
         });
+    }
+
+    public void onComposeAction(MenuItem mi) {
+        if (mi.getItemId() == R.id.infos_item) {
+            Intent activity4 = new Intent(Activity6.this, Activity4.class);
+            startActivity(activity4);
+        } else {
+            throw new RuntimeException("Aie !");
+        }
     }
 }
