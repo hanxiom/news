@@ -24,10 +24,11 @@ public class Activity5 extends AppCompatActivity {
     ArrayList<String> authors = new ArrayList<>();
     ArrayList<String> dates = new ArrayList<>();
     ArrayList<String> contents = new ArrayList<>();
+    ArrayList<String> images = new ArrayList<>();
     ArrayList<String> urls = new ArrayList<>();
 
     @Override
-    public boolean onSupportNavigateUp(){
+    public boolean onSupportNavigateUp() {
         // Enables the back button behaviour
         finish();
         return true;
@@ -61,6 +62,7 @@ public class Activity5 extends AppCompatActivity {
                 Contract.Entry.COLUMN_NAME_AUTHOR,
                 Contract.Entry.COLUMN_NAME_DATE,
                 Contract.Entry.COLUMN_NAME_CONTENT,
+                Contract.Entry.COLUMN_NAME_IMAGE,
                 Contract.Entry.COLUMN_NAME_URL,
         };
 
@@ -92,6 +94,9 @@ public class Activity5 extends AppCompatActivity {
             String content = cursor.getString(
                     cursor.getColumnIndexOrThrow(Contract.Entry.COLUMN_NAME_CONTENT));
             contents.add(content);
+            String image = cursor.getString(
+                    cursor.getColumnIndexOrThrow(Contract.Entry.COLUMN_NAME_IMAGE));
+            images.add(image);
             String url = cursor.getString(
                     cursor.getColumnIndexOrThrow(Contract.Entry.COLUMN_NAME_URL));
             urls.add(url);
@@ -123,6 +128,7 @@ public class Activity5 extends AppCompatActivity {
                 activity6.putExtra("author", authors.get(position));
                 activity6.putExtra("date", dates.get(position));
                 activity6.putExtra("content", contents.get(position));
+                activity6.putExtra("image", images.get(position));
                 activity6.putExtra("url", urls.get(position));
                 startActivity(activity6);
             }

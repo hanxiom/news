@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class Activity4 extends AppCompatActivity {
 
     @Override
-    public boolean onSupportNavigateUp(){
+    public boolean onSupportNavigateUp() {
         // Enables the back button behaviour
         finish();
         return true;

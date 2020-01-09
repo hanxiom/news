@@ -12,6 +12,7 @@ final class Contract {
                     Entry.COLUMN_NAME_AUTHOR + " TEXT," +
                     Entry.COLUMN_NAME_DATE + " TEXT," +
                     Entry.COLUMN_NAME_CONTENT + " TEXT," +
+                    Entry.COLUMN_NAME_IMAGE + " TEXT," +
                     Entry.COLUMN_NAME_URL + " TEXT)";
     static final String SQL_DELETE_ENTRIES =
             "DROP TABLE IF EXISTS " + Entry.TABLE_NAME;
@@ -27,6 +28,7 @@ final class Contract {
         static final String COLUMN_NAME_AUTHOR = "author";
         static final String COLUMN_NAME_DATE = "date";
         static final String COLUMN_NAME_CONTENT = "content";
+        static final String COLUMN_NAME_IMAGE = "image";
         static final String COLUMN_NAME_URL = "url";
     }
 }

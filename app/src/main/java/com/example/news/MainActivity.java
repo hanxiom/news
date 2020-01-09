@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         ((NewsApp) getApplication()).dbHelper = new DbHelper(this);
 
-        Button lancer_la_recherche = findViewById(R.id.lancer_la_recherche);;
+        Button lancer_la_recherche = findViewById(R.id.lancer_la_recherche);
         spinner1 = findViewById(R.id.spinner1);
         spinner1.setOnItemSelectedListener(this);
         spinner2 = findViewById(R.id.spinner2);
@@ -124,17 +124,19 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         Runtime runtime = Runtime.getRuntime();
         try {
             Process ipProcess = runtime.exec("/system/bin/ping -c 1 8.8.8.8");
-            int     exitValue = ipProcess.waitFor();
+            int exitValue = ipProcess.waitFor();
             return (exitValue == 0);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
-        catch (IOException e)          { e.printStackTrace(); }
-        catch (InterruptedException e) { e.printStackTrace(); }
 
         return false;
     }
 
     public void onComposeAction(MenuItem mi) {
-        switch(mi.getItemId()) {
+        switch (mi.getItemId()) {
             case R.id.fav_item:
                 Intent activity5 = new Intent(MainActivity.this, Activity5.class);
                 startActivity(activity5);

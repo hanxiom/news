@@ -22,7 +22,7 @@ public class Activity2 extends AppCompatActivity {
     AsyncNewsJSONData task;
 
     @Override
-    public boolean onSupportNavigateUp(){
+    public boolean onSupportNavigateUp() {
         // Enables the back button behaviour
         finish();
         return true;
@@ -111,7 +111,7 @@ public class Activity2 extends AppCompatActivity {
     }
 
     public void onComposeAction(MenuItem mi) {
-        switch(mi.getItemId()) {
+        switch (mi.getItemId()) {
             case R.id.fav_item:
                 Intent activity5 = new Intent(Activity2.this, Activity5.class);
                 startActivity(activity5);

@@ -9,11 +9,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.snackbar.Snackbar;
+import com.squareup.picasso.Picasso;
 
 import static com.example.news.Contract.Entry.COLUMN_NAME_TITLE;
 import static com.example.news.Contract.Entry.TABLE_NAME;
@@ -23,13 +25,14 @@ public class Activity6 extends AppCompatActivity {
     String source;
     String author;
     String date;
+    String image;
     String content;
     String url;
 
     Snackbar mySnackbar;
 
     @Override
-    public boolean onSupportNavigateUp(){
+    public boolean onSupportNavigateUp() {
         // Enables the back button behaviour
         finish();
         return true;
@@ -57,6 +60,7 @@ public class Activity6 extends AppCompatActivity {
         TextView textView3 = findViewById(R.id.textView32);
         TextView textView4 = findViewById(R.id.textView33);
         TextView textView5 = findViewById(R.id.textView34);
+        ImageView imageView = findViewById(R.id.imageView);
         Button lire = findViewById(R.id.lire);
 
         Intent intent = getIntent();
@@ -65,6 +69,7 @@ public class Activity6 extends AppCompatActivity {
         source = intent.getStringExtra("name");
         author = intent.getStringExtra("author");
         date = intent.getStringExtra("date");
+        image = intent.getStringExtra("image");
         content = intent.getStringExtra("content");
         url = intent.getStringExtra("url");
 
@@ -72,6 +77,8 @@ public class Activity6 extends AppCompatActivity {
         textView2.setText("Source : " + source + "\n");
         textView3.setText("Auteur : " + author + "\n");
         textView4.setText("Date de publication : " + date + "\n");
+        //Loading image using Picasso
+        Picasso.get().load(image).into(imageView);
         textView5.setText("Résumé : " + content + "\n");
 
         // Ouvrir l'article sur Internet

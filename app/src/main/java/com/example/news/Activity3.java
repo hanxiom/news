@@ -2,10 +2,8 @@ package com.example.news;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -13,14 +11,10 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.squareup.picasso.Picasso;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.snackbar.Snackbar;
-
-import java.io.InputStream;
-import java.net.URL;
+import com.squareup.picasso.Picasso;
 
 public class Activity3 extends AppCompatActivity {
 
@@ -35,7 +29,7 @@ public class Activity3 extends AppCompatActivity {
     Snackbar mySnackbar;
 
     @Override
-    public boolean onSupportNavigateUp(){
+    public boolean onSupportNavigateUp() {
         // Enables the back button behaviour
         finish();
         return true;
@@ -101,7 +95,7 @@ public class Activity3 extends AppCompatActivity {
         favoris.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                boolean success = ((NewsApp) getApplication()).dbHelper.insertRow(title, source, author, date, content, url);
+                boolean success = ((NewsApp) getApplication()).dbHelper.insertRow(title, source, author, date, content, image, url);
 
                 if (success) {
                     mySnackbar = Snackbar.make(findViewById(R.id.myCoordinatorLayout), "L'article a été enregistré dans vos favori", Snackbar.LENGTH_LONG);
@@ -114,7 +108,7 @@ public class Activity3 extends AppCompatActivity {
     }
 
     public void onComposeAction(MenuItem mi) {
-        switch(mi.getItemId()) {
+        switch (mi.getItemId()) {
             case R.id.fav_item:
                 Intent activity5 = new Intent(Activity3.this, Activity5.class);
                 startActivity(activity5);

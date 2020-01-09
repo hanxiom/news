@@ -8,6 +8,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import static com.example.news.Contract.Entry.COLUMN_NAME_AUTHOR;
 import static com.example.news.Contract.Entry.COLUMN_NAME_CONTENT;
 import static com.example.news.Contract.Entry.COLUMN_NAME_DATE;
+import static com.example.news.Contract.Entry.COLUMN_NAME_IMAGE;
 import static com.example.news.Contract.Entry.COLUMN_NAME_SOURCE;
 import static com.example.news.Contract.Entry.COLUMN_NAME_TITLE;
 import static com.example.news.Contract.Entry.COLUMN_NAME_URL;
@@ -42,7 +43,7 @@ public class DbHelper extends SQLiteOpenHelper {
         onUpgrade(db, oldVersion, newVersion);
     }
 
-    boolean insertRow(String title, String source, String author, String date, String content, String url) {
+    boolean insertRow(String title, String source, String author, String date, String content, String image, String url) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(COLUMN_NAME_TITLE, title);
@@ -50,6 +51,7 @@ public class DbHelper extends SQLiteOpenHelper {
         values.put(COLUMN_NAME_AUTHOR, author);
         values.put(COLUMN_NAME_DATE, date);
         values.put(COLUMN_NAME_CONTENT, content);
+        values.put(COLUMN_NAME_IMAGE, image);
         values.put(COLUMN_NAME_URL, url);
 
         long newRowId = db.insert(TABLE_NAME, null, values);
